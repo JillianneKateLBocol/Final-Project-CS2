@@ -15,3 +15,10 @@ Feature 3: Show top 3 customers
 Feature 4: Show number of orders by status
 
 Feature 5: Search sales of a product
+
+Planned Inputs and Outputs:
+Inputs:
+order ID, customer name, order date, status, payment method, home address, items, product.
+
+Outputs:
+category, price, quantity, total amount.

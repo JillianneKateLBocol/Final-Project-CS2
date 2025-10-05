@@ -25,6 +25,7 @@ Feature 5: Search sales of a product
 
 Inputs:
 order ID, customer name, order date, status, payment method, home address, items, product.
+
 Outputs:
 category, price, quantity, total amount.
 

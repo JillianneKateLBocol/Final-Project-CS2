@@ -2,7 +2,7 @@
 📝 Eccomerce Analyzer
 -- Eccomerce.JSON
 
-🔍 Problem Statement:
+🔍 Problem Statement: Many online stores struggle with efficiently managing orders and products, which creates challenges for both businesses and customers. Poor inventory tracking often leads to overselling or stockouts, while delayed order processing results in customer dissatisfaction. These issues not only harm customer trust but also limit the store’s ability to scale and compete in the fast-paced e-commerce industry. Developing effective solutions for order and product management is therefore crucial to improving customer experience and ensuring business growth.
 
 
 🎯 Project Objectives:

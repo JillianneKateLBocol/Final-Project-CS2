@@ -57,8 +57,8 @@ IF choice == 1:
             total_orders += 1
             total_revenue += total_amount
             
-        OUTPUT "Total orders: ", total_orders
-        OUTPUT "Total revenue: ", total_revenue
+OUTPUT "Total orders: ", total_orders
+OUTPUT "Total revenue: ", total_revenue
         
 ELIF choice == 2:
         best_selling = MAX(quantity)

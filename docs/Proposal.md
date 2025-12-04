@@ -47,10 +47,10 @@ WHILE choice != 6:
     OUTPUT "[5] Search sales of a product"
     OUTPUT "[6] End program"
     
-    OUTPUT "Choose a feature: "
+OUTPUT "Choose a feature: "
     INPUT choice
     
-    IF choice == 1:
+IF choice == 1:
         total_orders = 0
         total_revenue = 0
         FOR order IN orders_list:
@@ -60,34 +60,34 @@ WHILE choice != 6:
         OUTPUT "Total orders: ", total_orders
         OUTPUT "Total revenue: ", total_revenue
         
-    ELIF choice == 2:
+ELIF choice == 2:
         best_selling = MAX(quantity)
         OUTPUT "Best selling product: ", best_selling
         
-    ELIF choice == 3:
+ELIF choice == 3:
         Group orders by customer
         Sort in descending order based of total_amount
         Select top 3 customers
             OUTPUT "Top 3 customers: ", "#1: ", top 1, "#2: ", top 2, "#3: ", top 3
         
-    ELIF choice == 4:
+ELIF choice == 4:
         Group orders by status
         Count pending
         Count shipped
         Count delivered
         OUTPUT "Pending", pending, "Shipped", shipped, "Delivered", delivered
         
-    ELIF choice == 5:
+ELIF choice == 5:
         OUTPUT "Search a product for its sales: "
         INPUT product
         Search product in list
         Count quantity
         OUTPUT product, "sales: ", quantity
         
-    ELIF choice == 6:
+ELIF choice == 6:
         OUTPUT "Exiting program. Thank you!"
         
-    ELSE:
+ELSE:
         OUTPUT "Invalid choice. Please try again."
         
 END

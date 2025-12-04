@@ -36,7 +36,7 @@ This section showchases the flowchart and pseudocode of the proposal.
 
 START
 
-LOAD order_records
+load order records
 choice = 0
 
 WHILE choice != 6:
@@ -51,55 +51,45 @@ WHILE choice != 6:
     INPUT choice
     
     IF choice == 1:
-        total_orders  = 0
+        total_orders = 0
         total_revenue = 0
-        
         FOR order IN orders_list:
-            total_orders  += 1
+            total_orders += 1
             total_revenue += total_amount
-        
+            
         OUTPUT "Total orders: ", total_orders
         OUTPUT "Total revenue: ", total_revenue
-
+        
     ELIF choice == 2:
         best_selling = MAX(quantity)
         OUTPUT "Best selling product: ", best_selling
-
-    ELIF choice == 3:
-        GROUP orders BY customer
-        SORT groups BY total_amount DESC
-        SELECT top 3 customers
         
-        OUTPUT "Top 3 customers:"
-        OUTPUT "  #1: ", top_1
-        OUTPUT "  #2: ", top_2
-        OUTPUT "  #3: ", top_3
-
+    ELIF choice == 3:
+        Group orders by customer
+        Sort in descending order based of total_amount
+        Select top 3 customers
+            OUTPUT "Top 3 customers: ", "#1: ", top 1, "#2: ", top 2, "#3: ", top 3
+        
     ELIF choice == 4:
-        GROUP orders BY status
-        COUNT pending
-        COUNT shipped
-        COUNT delivered
-
-        OUTPUT "Pending: ", pending
-        OUTPUT "Shipped: ", shipped
-        OUTPUT "Delivered: ", delivered
-
+        Group orders by status
+        Count pending
+        Count shipped
+        Count delivered
+        OUTPUT "Pending", pending, "Shipped", shipped, "Delivered", delivered
+        
     ELIF choice == 5:
         OUTPUT "Search a product for its sales: "
         INPUT product
+        Search product in list
+        Count quantity
+        OUTPUT product, "sales: ", quantity
         
-        SEARCH product IN orders_list
-        COUNT quantity
-        
-        OUTPUT product, " sales: ", quantity
-
     ELIF choice == 6:
         OUTPUT "Exiting program. Thank you!"
-
+        
     ELSE:
         OUTPUT "Invalid choice. Please try again."
-
+        
 END
 
 

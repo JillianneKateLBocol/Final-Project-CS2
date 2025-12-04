@@ -91,4 +91,4 @@ WHILE choice != 6:
     END
 
 Flowchart:
-<img width="590" height="367" alt="591409443_1157440009831869_3451440952534326949_n" src="https://github.com/user-attachments/assets/cc907104-2c95-4aa7-84da-0819f59e833a" />
+<img width="2048" height="1275" alt="591409443_1157440009831869_3451440952534326949_n" src="https://github.com/user-attachments/assets/8efdebcd-5cfb-4e6a-bafe-13655470d8a6" />

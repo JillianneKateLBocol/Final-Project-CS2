@@ -1,4 +1,4 @@
-📌 Project Proposal (Draft 1)
+📌 Project Proposal (Final)
 📝 Eccomerce Analyzer
 -- Eccomerce.JSON
 
@@ -24,14 +24,16 @@ Feature 5: Search sales of a product
 ⌨️ Planned Inputs and Outputs:
 
 Inputs:
-order ID, customer name, order date, status, payment method, home address, items, product.
+; Order ID, customer name, order date, status, payment method, home address, items, product.
 
 Outputs:
-category, price, quantity, total amount.
+; Category, price, quantity, total amount.
 
 🧠 Logic Plan:
+This section showchases the flowchart and pseudocode of the proposal.
 
-Pseudocode:
+🫀 Pseudocode:
+
 START
 
 load order records
@@ -88,7 +90,7 @@ WHILE choice != 6:
     ELSE:
         OUTPUT "Invalid choice. Please try again."
         
-    END
+END
 
-Flowchart:
+🪢 Flowchart:
 <img width="2048" height="1275" alt="591409443_1157440009831869_3451440952534326949_n" src="https://github.com/user-attachments/assets/8efdebcd-5cfb-4e6a-bafe-13655470d8a6" />

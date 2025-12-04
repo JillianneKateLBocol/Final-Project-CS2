@@ -34,12 +34,12 @@ This section showchases the flowchart and pseudocode of the proposal.
 
 🫀 Pseudocode:
 
- START
+START
 
- load order records
- choice = 0
+LOAD order_records
+choice = 0
 
- WHILE choice != 6:
+WHILE choice != 6:
     OUTPUT "[1] Show total orders and total revenue"
     OUTPUT "[2] Show best-selling product"
     OUTPUT "[3] Show top 3 customers"
@@ -51,46 +51,57 @@ This section showchases the flowchart and pseudocode of the proposal.
     INPUT choice
     
     IF choice == 1:
-        total_orders = 0
+        total_orders  = 0
         total_revenue = 0
+        
         FOR order IN orders_list:
-            total_orders += 1
+            total_orders  += 1
             total_revenue += total_amount
-            
+        
         OUTPUT "Total orders: ", total_orders
         OUTPUT "Total revenue: ", total_revenue
-        
+
     ELIF choice == 2:
         best_selling = MAX(quantity)
         OUTPUT "Best selling product: ", best_selling
-        
+
     ELIF choice == 3:
-        Group orders by customer
-        Sort in descending order based of total_amount
-        Select top 3 customers
-            OUTPUT "Top 3 customers: ", "#1: ", top 1, "#2: ", top 2, "#3: ", top 3
+        GROUP orders BY customer
+        SORT groups BY total_amount DESC
+        SELECT top 3 customers
         
+        OUTPUT "Top 3 customers:"
+        OUTPUT "  #1: ", top_1
+        OUTPUT "  #2: ", top_2
+        OUTPUT "  #3: ", top_3
+
     ELIF choice == 4:
-        Group orders by status
-        Count pending
-        Count shipped
-        Count delivered
-        OUTPUT "Pending", pending, "Shipped", shipped, "Delivered", delivered
-        
+        GROUP orders BY status
+        COUNT pending
+        COUNT shipped
+        COUNT delivered
+
+        OUTPUT "Pending: ", pending
+        OUTPUT "Shipped: ", shipped
+        OUTPUT "Delivered: ", delivered
+
     ELIF choice == 5:
         OUTPUT "Search a product for its sales: "
         INPUT product
-        Search product in list
-        Count quantity
-        OUTPUT product, "sales: ", quantity
         
+        SEARCH product IN orders_list
+        COUNT quantity
+        
+        OUTPUT product, " sales: ", quantity
+
     ELIF choice == 6:
         OUTPUT "Exiting program. Thank you!"
-        
+
     ELSE:
         OUTPUT "Invalid choice. Please try again."
-        
-    END
+
+END
+
 
 🪢 Flowchart:
 <img width="2048" height="1275" alt="591409443_1157440009831869_3451440952534326949_n" src="https://github.com/user-attachments/assets/8efdebcd-5cfb-4e6a-bafe-13655470d8a6" />

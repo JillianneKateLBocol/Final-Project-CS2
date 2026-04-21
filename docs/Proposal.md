@@ -120,4 +120,7 @@ FUNCTION Process_F(order_records):
 RETURN
 
 🪢 Flowchart:
-<img width="2048" height="1275" alt="591409443_1157440009831869_3451440952534326949_n" src="https://github.com/user-attachments/assets/8efdebcd-5cfb-4e6a-bafe-13655470d8a6" />
+<img width="1679" height="1539" alt="image" src="https://github.com/user-attachments/assets/99fddb63-a815-4f3e-acd6-65f66cea2f29" />
+<img width="1679" height="1539" alt="image" src="https://github.com/user-attachments/assets/f92f66d2-e35b-4905-b086-e7739ff045d1" />
+<img width="1679" height="1539" alt="image" src="https://github.com/user-attachments/assets/db51f536-30ce-4ee1-a0ea-bec8f961305d" />
+<img width="1679" height="1539" alt="image" src="https://github.com/user-attachments/assets/d9d2a2c3-08b7-449f-ba23-82309cef9e64" />

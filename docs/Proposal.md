@@ -35,63 +35,89 @@ This section showchases the flowchart and pseudocode of the proposal.
 🫀 Pseudocode:
 
 START
+  DECLARE choice, total_orders, total_revenue : INTEGER
+  DECLARE best_selling, quantity, product : STRING
+  DECLARE top_1, top_2, top_3, status, pending, shipped, delivered : STRING
 
-load order records
-choice = 0
+  LOAD order_records FROM database
 
-WHILE choice != 6:
-    OUTPUT "[1] Show total orders and total revenue"
-    OUTPUT "[2] Show best-selling product"
-    OUTPUT "[3] Show top 3 customers"
-    OUTPUT "[4] Show number of orders by status"
-    OUTPUT "[5] Search sales of a product"
-    OUTPUT "[6] End program"
+  WHILE TRUE DO
+    DISPLAY "[1] Show total orders and total revenue"
+    DISPLAY "[2] Show best-selling product"
+    DISPLAY "[3] Show top 3 customers"
+    DISPLAY "[4] Show number of orders by status"
+    DISPLAY "[5] Search sales of a product"
+    DISPLAY "[6] End program"
     
-    OUTPUT "Choose a feature: "
     INPUT choice
     
-    IF choice == 1:
-        total_orders = 0
-        total_revenue = 0
-        FOR order IN orders_list:
-            total_orders += 1
-            total_revenue += total_amount
-            
-        OUTPUT "Total orders: ", total_orders
-        OUTPUT "Total revenue: ", total_revenue
-        
-    ELIF choice == 2:
-        best_selling = MAX(quantity)
-        OUTPUT "Best selling product: ", best_selling
-        
-    ELIF choice == 3:
-        Group orders by customer
-        Sort in descending order based of total_amount
-        Select top 3 customers
-            OUTPUT "Top 3 customers: ", "#1: ", top 1, "#2: ", top 2, "#3: ", top 3
-        
-    ELIF choice == 4:
-        Group orders by status
-        Count pending
-        Count shipped
-        Count delivered
-        OUTPUT "Pending", pending, "Shipped", shipped, "Delivered", delivered
-        
-    ELIF choice == 5:
-        OUTPUT "Search a product for its sales: "
-        INPUT product
-        Search product in list
-        Count quantity
-        OUTPUT product, "sales: ", quantity
-        
-    ELIF choice == 6:
-        OUTPUT "Exiting program. Thank you!"
-        
-    ELSE:
-        OUTPUT "Invalid choice. Please try again."
-        
+    IF choice = 1 THEN
+      CALL Process_A(order_records)
+    ELSE IF choice = 2 THEN
+      CALL Process_B(order_records)
+    ELSE IF choice = 3 THEN
+      CALL Process_C(order_records)
+    ELSE IF choice = 4 THEN
+      CALL Process_D(order_records)
+    ELSE IF choice = 5 THEN
+      CALL Process_E(order_records)
+    ELSE IF choice = 6 THEN
+      CALL Process_F(order_records)
+      BREAK loop
+    ELSE
+      DISPLAY "Invalid choice. Please try again."
+    END IF
+  END WHILE
 END
 
+FUNCTION Process_A(order_records):
+  total_orders = 0
+  total_revenue = 0
+  FOR EACH order IN order_list DO
+    total_orders = total_orders += 1
+    total_revenue = total_revenue += total_amount
+  END FOR
+  DISPLAY "Total orders: ", total_orders
+  DISPLAY "Total revenue: ", total_revenue
+RETURN
+
+FUNCTION Process_B(order_records):
+  best_selling = MAX(quantity)
+  DISPLAY "Best-selling product: ", best_selling
+RETURN
+
+FUNCTION Process_C(order_records):
+  Group orders by customer
+  Sort in descending based off total_amount
+  Select top 3 customers (top_1, top_2, top_3)
+  DISPLAY "Top 3 customers: "
+  DISPLAY "#1: ", top_1
+  DISPLAY "#2: ", top_2
+  DISPLAY "#3: ", top_3
+RETURN
+
+FUNCTION Process_D(order_records):
+  Group orders by status
+  Count pending
+  Count shipped
+  Count delivered
+  DISPLAY "Pending: ", pending
+  DISPLAY "Shipped: ", shipped
+  DISPLAY "Delivered: ", delivered
+RETURN
+
+FUNCTION Process_E(order_records):
+  DISPLAY "Search a product for its sales: "
+  INPUT product
+  Search product in list
+  Count quantity
+  DISPLAY product, "sales: ", quantity
+RETURN
+
+FUNCTION Process_F(order_records):
+  CLOSE database connection
+  DISPLAY "Exiting program. Thank you!"
+RETURN
 
 🪢 Flowchart:
 <img width="2048" height="1275" alt="591409443_1157440009831869_3451440952534326949_n" src="https://github.com/user-attachments/assets/8efdebcd-5cfb-4e6a-bafe-13655470d8a6" />
